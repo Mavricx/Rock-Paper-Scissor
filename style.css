@@ -1,0 +1,44 @@
+body {
+  background-color: black;
+  color: white;
+  text-align: ;
+}
+header {
+  background-color: #333;
+  color: white;
+  padding: 1em;
+  text-align: center;
+}
+#playground {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  display: flex;
+}
+#pc,
+#you {
+  height: 45vh;
+  width: 30vw;
+  background-color: pink;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: flex-end;
+}
+#pc {
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+#you {
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+#text {
+  padding: 10px;
+}
+#logo {
+  height: 40vh;
+  width: 30vw;
+  background-color: black;
+}
