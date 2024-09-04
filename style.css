@@ -9,6 +9,7 @@ header {
   padding: 1em;
   text-align: center;
 }
+
 @media (min-width: 320px) and (max-width: 900px) {
   #playground {
     position: relative;
@@ -16,6 +17,7 @@ header {
     height: 25vh;
     background-color: #ffffff;
     display: flex;
+    
   }
   #pc,
   #you {
@@ -41,11 +43,26 @@ header {
     height: 40vh;
     width: 100%;
     background-color: black;
-    
+  }
+  #pick {
+    background-color: green;
+    width: 80vw;
+    height: 15vh;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 14px;
+    display: flex;
+  }
+  #rock,
+  #paper,
+  #scissor {
+    height: 97%;
+    width: 33%;
+    border: 2px solid pink;
+    border-radius: 10px;
   }
 }
 @media (min-width: 900px) {
-  
   #playground {
     position: relative;
     width: 100%;
@@ -97,23 +114,23 @@ header {
     border-radius: 10px;
   }
 }
-#rock {
-  background-image: url("/images/rock/rock_up.png");
+#rock,#paper,#scissor{
+  cursor: pointer;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+}
+#rock {
+  background-image: url("/images/rock/rock_up.png");
+  
 }
 #paper {
   background-image: url("/images/paper/paper_up.png");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
+ 
 }
 #scissor {
   background-image: url("/images/scissor/scissor_up.png");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
+
 }
 #result {
   margin: auto;
@@ -134,4 +151,28 @@ header {
   border-radius: 5px;
   cursor: pointer;
   color: white;
+}
+#rock-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto;
+}
+
+#rock-image {
+  width: 73%; /* change this for more cooler version */
+  height: 100%;
+  animation: bounce 1s ease-in-out 3; /* 3 bounces */
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  } /* Start and end at original position */
+  50% {
+    transform: translateY(-50px);
+  } /* Move up */
 }
