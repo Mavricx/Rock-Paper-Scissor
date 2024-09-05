@@ -18,28 +18,35 @@ function randomGenerator() {
     pc = Math.floor(Math.random() * 3) + 1;
     console.log(pc)
 }
-// const streakReset = function () {
-//     streak = 0
-// }
+function streakUpdate() {
+    document.getElementById('streak').innerHTML = `<b>Winning Streak:${streak}</b>`;
+}
 function findWinner() {
     if (pc == 3 && you == 1) {
-        winner = "Computer Won This Match"
+        winner = "You Have Won This Match"
+        ++streak;
+        streakUpdate();
 
     }
     else if (pc == 1 && you == 3) {
-        winner = "You Have Won This Match"
-
+        winner = "Computer Won This Match"
+        streak = 0;
+        streakUpdate();
     }
     else if (pc > you) {
         winner = "Computer Won This Match"
+        streak = 0;
+        streakUpdate();
 
     }
     else if (pc < you) {
         winner = "You Have Won This Match"
-
+        ++streak;
+        streakUpdate();
     }
     else {
         winner = "This is a Draw"
+        streakUpdate();
 
     }
     document.getElementById('result').innerHTML = `<b>${winner}</b>`
