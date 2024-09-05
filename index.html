@@ -7,18 +7,20 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>Rock Paper Scissor</header>
+    <header><div id="name">Rock Paper Scissor</div>
+    <div id="streak"></div>
+    </header>
     <div id="playground">
       <div id="pc">
-        <div id="text">PC's Choice</div>
-        <div id="logo">
-          <img id="rock-image" src="/images/rock/rock_right.png" alt="Rock">
+        <div id="text">Computer's Choice</div>
+        <div id="logo pc_logo">
+          <img id="rock-image" class="one" src="/images/rock/rock_right.png" alt="Rock">
         </div>
       </div>
       <div id="you">
         <div id="text">Your Choice</div>
-        <div id="logo">
-          <img id="rock-image" src="/images/rock/rock_left.png" alt="Rock">
+        <div id="logo your_logo">
+          <img id="rock-image" class="two" src="/images/rock/rock_left.png" alt="Rock">
         </div>
       </div>
     </div>
@@ -29,10 +31,12 @@
       <div id="scissor"></div>
     </div>
     <div id="button">
-      <button id="reset">Reset Highscore</button>
+      <button id="again">Start</button>
       <button id="restart">Restart</button>  
+      <button id="reset">Reset Highscore</button>
+      
     </div>
     </div>
-    <script src="sript.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
