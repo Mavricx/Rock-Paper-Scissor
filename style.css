@@ -8,6 +8,15 @@ header {
   color: white;
   padding: 1em;
   text-align: center;
+  display: flex;
+  justify-content: space-between;
+  
+}
+#name{
+  font-family: "Handlee", cursive;
+  font-weight: 900;
+  font-size: 25px;
+  text-decoration: underline;
 }
 
 @media (min-width: 320px) and (max-width: 900px) {
@@ -15,15 +24,14 @@ header {
     position: relative;
     width: 100%;
     height: 25vh;
-    background-color:black;
+    background-color: black;
     display: flex;
-    
   }
   #pc,
   #you {
     height: 25vh;
     width: 45vw;
-    
+
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -45,7 +53,6 @@ header {
     background-color: black;
   }
   #pick {
-    background-color: green;
     width: 80vw;
     height: 15vh;
     border-radius: 10px;
@@ -57,7 +64,8 @@ header {
   #paper,
   #scissor {
     height: 97%;
-    width: 33%;
+    width: 30%;
+    margin: 10px;
     border: 2px solid pink;
     border-radius: 10px;
   }
@@ -67,7 +75,7 @@ header {
     position: relative;
     width: 100%;
     height: 100%;
-    background-color:black;
+    background-color: black;
     display: flex;
   }
   #pc,
@@ -96,7 +104,6 @@ header {
     background-color: black;
   }
   #pick {
-    background-color: green;
     width: 40vw;
     height: 18vh;
     border-radius: 10px;
@@ -108,12 +115,15 @@ header {
   #paper,
   #scissor {
     height: 97%;
-    width: 33%;
+    width: 30%;
+    margin: 10px;
     border: 2px solid pink;
     border-radius: 10px;
   }
 }
-#rock,#paper,#scissor{
+#rock,
+#paper,
+#scissor {
   cursor: pointer;
   background-size: contain;
   background-position: center;
@@ -121,36 +131,24 @@ header {
 }
 #rock {
   background-image: url("/images/rock/rock_up.png");
-  
 }
 #paper {
   background-image: url("/images/paper/paper_up.png");
- 
 }
 #scissor {
   background-image: url("/images/scissor/scissor_up.png");
-
 }
 #result {
   margin: auto;
   margin-top: 20px;
-  background-color: red;
+  background-color: rgb(0, 145, 255);
   height: 30px;
   width: 70vw;
+  color: black;
   padding-top: 7px;
   border-radius: 5px;
 }
-#button {
-  margin: auto;
-  margin-top: 20px;
-  background-color: green;
-  height: 30px;
-  width: 70vw;
-  padding-top: 7px;
-  border-radius: 5px;
-  cursor: pointer;
-  color: white;
-}
+
 #rock-container {
   width: 100%;
   height: 100%;
@@ -172,6 +170,17 @@ header {
     transform: translateY(0);
   } /* Start and end at original position */
   50% {
-    transform: translateY(-50px);
+    transform: translateY(-40px);
   } /* Move up */
+}
+button {
+  margin: auto;
+  margin-top: 20px;
+  background-color: rgba(244, 87, 8, 0.904);
+  height: 50px;
+  width: 70vw;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
 }
