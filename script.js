@@ -20,21 +20,18 @@ function win() {
     col = 'rgba(8,244,63,0.904)';
     winner = "You've Won"
     ++streak;
-    streakUpdate();
+
 }
 
 function lose() {
     col = `rgba(244, 8, 8, 0.904)`;
     winner = "Computer Won"
     streak = 0;
-    streakUpdate();
 }
-
 function draw() {
     col = `#f0e130`;
     result.style.color = `black`;
     winner = "That's a Draw"
-    streakUpdate();
 }
 
 function initial() {
@@ -53,6 +50,7 @@ function randomGenerator() {
 }
 
 function show() {
+    streakUpdate();
     showBothSigns(pc_sign, pc, you_sign, you);
     result.style.backgroundColor = `${col}`;
     result.innerHTML = `<b>${winner}</b>`
@@ -73,8 +71,8 @@ function findWinner() {
     }
     else {
         draw();
-
     }
+
 }
 
 function showBothSigns(img1, no1, img2, no2) {
