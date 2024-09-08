@@ -101,7 +101,7 @@ function pickSign() {
         you = 1;
         randomGenerator();
         startAnimation();
-        setTimeout(show, 2900)
+        setTimeout(show, 2400)
         findWinner();
     });
     paper.addEventListener("click", function () {
